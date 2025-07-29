@@ -128,23 +128,6 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-3">
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="flex-1 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300"
-                  >
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
-                  <Button 
-                    size="sm"
-                    className="flex-1 bg-tech-gradient hover:shadow-glow transition-all duration-300"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
-                  </Button>
-                </div>
               </CardContent>
             </Card>
           ))}
