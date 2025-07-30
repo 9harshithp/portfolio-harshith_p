@@ -155,7 +155,7 @@ const Hero = () => {
             {/* Stats Row */}
             <div className="flex flex-wrap gap-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               {[{
-                number: '15+',
+                number: '5+',
                 label: 'Projects',
                 icon: Star
               }, {
