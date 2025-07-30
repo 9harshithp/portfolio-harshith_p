@@ -111,74 +111,52 @@ const Hero = () => {
           </div>)}
       </div>
 
-      <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between min-h-screen gap-12">
-          {/* Ultra-Modern Left Content */}
-          <div className={`lg:w-1/2 text-white space-y-10 transition-all duration-1000 ${isVisible ? 'animate-slide-in-left opacity-100' : 'opacity-0'}`}>
+      <div className="container mx-auto px-6 py-8 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between min-h-screen gap-16">
+          {/* Left Content Section */}
+          <div className={`lg:w-3/5 text-white space-y-8 transition-all duration-1000 ${isVisible ? 'animate-slide-in-left opacity-100' : 'opacity-0'}`}>
             
-            {/* Status Badge */}
+            {/* Greeting */}
+            <div className="animate-fade-in">
+              <h2 className="text-2xl md:text-3xl font-light opacity-80 mb-2">Hello, I'm</h2>
+            </div>
             
-
-            <div className="space-y-8">
-              {/* Modern Greeting */}
-              <div className="flex items-center gap-4 animate-fade-in">
-                
-                <div>
-                  
-                  <div className="flex items-center gap-2 mt-1">
-                    
-                    
-                  </div>
-                </div>
-              </div>
-              
-              {/* Ultra-Modern Name Display */}
-              <div className="space-y-4">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight animate-scale-pulse">
-                  <span className="bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent block">Harshith P</span>
-                  <span className="bg-gradient-to-r from-tech-accent via-tech-secondary to-tech-primary bg-clip-text text-transparent block">
+            {/* Name */}
+            <div className="space-y-2">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                <span className="bg-gradient-to-r from-white via-white to-white/90 bg-clip-text text-transparent">
+                  Harshith P
                 </span>
-                </h1>
-                
-                {/* Dynamic Role with Modern Typography */}
-                <div className="relative h-16 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center">
-                    <span className="text-2xl md:text-3xl font-light opacity-60">A passionate </span>
-                    <div className="relative ml-2">
-                      <span key={currentWord} className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-tech-accent to-white bg-clip-text text-transparent animate-fade-in">
-                        {roles[currentWord]}
-                      </span>
-                      <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-tech-accent to-transparent animate-fade-in"></div>
-                    </div>
+              </h1>
+              
+              {/* Dynamic Role */}
+              <div className="relative h-12 overflow-hidden">
+                <div className="absolute inset-0 flex items-center">
+                  <span className="text-xl md:text-2xl font-light opacity-70">An </span>
+                  <div className="relative ml-2">
+                    <span key={currentWord} className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-tech-accent to-white bg-clip-text text-transparent animate-fade-in">
+                      {roles[currentWord]}
+                    </span>
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Enhanced Description */}
-              <div className="space-y-6 animate-fade-in" style={{
-              animationDelay: '0.3s'
-            }}>
-                <p className="text-xl md:text-2xl font-light leading-relaxed">
-                  <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
-                    Crafting the future through
-                  </span>
-                  <span className="bg-gradient-to-r from-tech-accent to-tech-secondary bg-clip-text text-transparent font-semibold">
-                    {" "}intelligent cloud solutions
-                  </span>
-                </p>
-                <p className="text-lg opacity-80 leading-relaxed max-w-xl">
-                  Specializing in AI-powered applications, scalable cloud architectures, and innovative 
-                  full-stack solutions that transform ideas into reality.
-                </p>
-              </div>
+            {/* Description */}
+            <div className="space-y-4 animate-fade-in max-w-2xl" style={{ animationDelay: '0.3s' }}>
+              <p className="text-lg md:text-xl leading-relaxed opacity-90">
+                Crafting the future through intelligent cloud solutions and AI-powered applications.
+              </p>
+              <p className="text-base opacity-75 leading-relaxed">
+                Specializing in scalable cloud architectures and innovative full-stack solutions that transform ideas into reality.
+              </p>
+            </div>
 
-              {/* Modern Stats Grid */}
-              <div className="grid grid-cols-3 gap-6 animate-fade-in" style={{
-              animationDelay: '0.6s'
-            }}>
-                {[{
+            {/* Stats Row */}
+            <div className="flex flex-wrap gap-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              {[{
                 number: '15+',
-                label: 'Projects Delivered',
+                label: 'Projects',
                 icon: Star
               }, {
                 number: '5+',
@@ -188,127 +166,117 @@ const Hero = () => {
                 number: '20+',
                 label: 'Technologies',
                 icon: Code
-              }].map(({
-                number,
-                label,
-                icon: Icon
-              }, index) => <div key={label} className="glass-card p-6 rounded-2xl text-center modern-hover group" style={{
-                animationDelay: `${0.7 + index * 0.1}s`
-              }}>
-                    <Icon className="w-6 h-6 mx-auto mb-3 text-tech-accent group-hover:animate-wiggle" />
-                    <div className="text-2xl font-bold bg-gradient-to-r from-tech-accent to-white bg-clip-text text-transparent">
-                      {number}
-                    </div>
-                    <div className="text-sm opacity-70 mt-1">{label}</div>
-                  </div>)}
-              </div>
+              }].map(({ number, label, icon: Icon }, index) => (
+                <div key={label} className="text-center group">
+                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-tech-accent to-white bg-clip-text text-transparent">
+                    {number}
+                  </div>
+                  <div className="text-sm opacity-70 mt-1">{label}</div>
+                </div>
+              ))}
             </div>
 
-            {/* Ultra-Modern Action Buttons */}
-            <div className="flex flex-wrap gap-4 animate-fade-in" style={{
-            animationDelay: '0.9s'
-          }}>
-              <Button size="lg" className="glass-card border-0 bg-gradient-to-r from-white to-white/90 text-primary hover:shadow-glow transition-all duration-500 group px-8 py-4" onClick={() => scrollToSection('projects')}>
+            {/* Action Buttons */}
+            <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white hover:shadow-lg transition-all duration-500 group px-8 py-3 rounded-full font-semibold" 
+                onClick={() => scrollToSection('projects')}
+              >
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Explore My Work
+                Get Started
               </Button>
-              <Button size="lg" variant="outline" className="glass-card border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-500 px-8 py-4 group" onClick={() => scrollToSection('contact')}>
-                <Mail className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                Let's Connect
-              </Button>
-              <Button size="lg" variant="outline" className="glass-card border-tech-accent/50 text-tech-accent hover:bg-tech-accent/10 backdrop-blur-sm transition-all duration-500 px-8 py-4 group">
-                <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                Resume
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-500 px-8 py-3 rounded-full group" 
+                onClick={() => scrollToSection('contact')}
+              >
+                <Play className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+                Watch Intro
               </Button>
             </div>
 
-            {/* Premium Social Links */}
-            <div className="flex space-x-6 animate-fade-in" style={{
-            animationDelay: '1.2s'
-          }}>
+            {/* Social Links */}
+            <div className="flex space-x-4 animate-fade-in" style={{ animationDelay: '1.2s' }}>
               {[{
-              href: "https://github.com/9harshithp",
-              Icon: Github,
-              label: "GitHub",
-              color: "hover:text-gray-400"
-            }, {
-              href: "https://linkedin.com/in/harshithp914",
-              Icon: Linkedin,
-              label: "LinkedIn",
-              color: "hover:text-blue-400"
-            }, {
-              href: "mailto:harshithp914@gmail.com",
-              Icon: Mail,
-              label: "Email",
-              color: "hover:text-red-400"
-            }].map(({
-              href,
-              Icon,
-              label,
-              color
-            }, index) => <a key={label} href={href} target={href.includes('mailto') ? undefined : "_blank"} rel={href.includes('mailto') ? undefined : "noopener noreferrer"} className={`glass-card w-14 h-14 rounded-2xl flex items-center justify-center text-white ${color} transition-all duration-500 modern-hover group`} style={{
-              animationDelay: `${1.3 + index * 0.1}s`
-            }}>
-                  <Icon size={20} className="group-hover:scale-125 transition-transform duration-300" />
-                </a>)}
+                href: "https://github.com/9harshithp",
+                Icon: Github,
+                label: "GitHub"
+              }, {
+                href: "https://linkedin.com/in/harshithp914",
+                Icon: Linkedin,
+                label: "LinkedIn"
+              }, {
+                href: "mailto:harshithp914@gmail.com",
+                Icon: Mail,
+                label: "Email"
+              }].map(({ href, Icon, label }, index) => (
+                <a 
+                  key={label} 
+                  href={href} 
+                  target={href.includes('mailto') ? undefined : "_blank"} 
+                  rel={href.includes('mailto') ? undefined : "noopener noreferrer"} 
+                  className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 group"
+                >
+                  <Icon size={18} className="group-hover:scale-110 transition-transform duration-300" />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Ultra-Modern Profile Section */}
-          <div className={`lg:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0 transition-all duration-1000 ${isVisible ? 'animate-slide-in-right opacity-100' : 'opacity-0'}`}>
+          {/* Right Profile Section */}
+          <div className={`lg:w-2/5 flex justify-center lg:justify-end transition-all duration-1000 ${isVisible ? 'animate-slide-in-right opacity-100' : 'opacity-0'}`}>
             <div className="relative">
               {/* Main Profile Container */}
               <div className="relative group">
-                {/* Outer Glow Ring */}
-                <div className="absolute -inset-8 bg-gradient-to-r from-tech-accent via-tech-secondary to-tech-primary rounded-full opacity-20 animate-rotate-slow"></div>
+                {/* Background Elements */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 rounded-full blur-2xl"></div>
                 
-                {/* Glass Frame */}
-                <div className="relative glass-card p-4 rounded-full">
-                  <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden relative group-hover:scale-105 transition-all duration-700">
-                    <img src={profileImage} alt="Harshith Ponnaganti - AI & Cloud Engineer" className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" />
-                    {/* Overlay Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-tech-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Profile Image */}
+                <div className="relative">
+                  <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden relative group-hover:scale-105 transition-all duration-700 border-4 border-white/20">
+                    <img 
+                      src={profileImage} 
+                      alt="Harshith Ponnaganti - AI & Cloud Engineer" 
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" 
+                    />
                   </div>
                 </div>
-              </div>
-              
-              {/* Floating Tech Badges */}
-              <div className="absolute -top-8 -right-8 glass-card p-4 rounded-2xl modern-hover group">
-                <div className="text-center">
-                  <Cpu className="w-8 h-8 mx-auto mb-2 text-tech-accent group-hover:animate-wiggle" />
-                  <div className="text-sm font-semibold">AI Expert</div>
-                  <div className="text-xs opacity-70">Machine Learning</div>
+                
+                {/* Experience Badge */}
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-lg">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-gray-800">5+</div>
+                    <div className="text-xs text-gray-600">Years Experience</div>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="absolute -bottom-8 -left-8 glass-card p-4 rounded-2xl modern-hover group">
-                <div className="text-center">
-                  <Cloud className="w-8 h-8 mx-auto mb-2 text-blue-400 group-hover:animate-wiggle" />
-                  <div className="text-sm font-semibold">Cloud Native</div>
-                  <div className="text-xs opacity-70">AWS & Azure</div>
-                </div>
-              </div>
-
-              {/* Orbiting Particles */}
-              <div className="absolute inset-0 pointer-events-none">
-                <div className="relative w-full h-full">
-                  {[...Array(3)].map((_, i) => <div key={i} className="absolute top-1/2 left-1/2 w-3 h-3 bg-gradient-to-r from-tech-accent to-white rounded-full animate-orbit" style={{
-                  animationDelay: `${i * 2}s`,
-                  animationDuration: `${10 + i * 2}s`
-                }}></div>)}
+                
+                {/* Customer Rating Badge */}
+                <div className="absolute bottom-8 -left-8 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg flex items-center gap-2">
+                  <div className="flex -space-x-2">
+                    <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-2 border-white"></div>
+                    <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full border-2 border-white"></div>
+                    <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full border-2 border-white"></div>
+                  </div>
+                  <div className="text-sm">
+                    <div className="font-semibold text-gray-800">Best Customer</div>
+                    <div className="text-xs text-gray-600">Experience</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Modern Scroll Indicator */}
+        {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <button onClick={() => scrollToSection('about')} className="glass-card p-4 rounded-2xl text-white hover:text-tech-accent transition-all duration-500 group modern-hover">
-            <div className="flex flex-col items-center gap-3">
-              <span className="text-sm font-medium opacity-70 group-hover:opacity-100">Discover More</span>
-              <ArrowDown size={24} className="group-hover:animate-bounce" />
-            </div>
+          <button 
+            onClick={() => scrollToSection('about')} 
+            className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors duration-300 group"
+          >
+            <span className="text-sm">Scroll Down</span>
+            <ArrowDown size={20} className="group-hover:animate-bounce" />
           </button>
         </div>
       </div>
