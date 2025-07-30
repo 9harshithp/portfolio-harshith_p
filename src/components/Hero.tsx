@@ -163,7 +163,7 @@ const Hero = () => {
                 label: 'Years Experience',
                 icon: Zap
               }, {
-                number: '20+',
+                number: '8+',
                 label: 'Technologies',
                 icon: Code
               }].map(({ number, label, icon: Icon }, index) => (
