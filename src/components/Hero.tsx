@@ -143,7 +143,9 @@ const Hero = () => {
             </div>
 
             {/* Description */}
-            <div className="space-y-4 animate-fade-in max-w-2xl" style={{ animationDelay: '0.3s' }}>
+            <div className="space-y-4 animate-fade-in max-w-2xl" style={{
+            animationDelay: '0.3s'
+          }}>
               <p className="text-lg md:text-xl leading-relaxed opacity-90">
                 Crafting the future through intelligent cloud solutions and AI-powered applications.
               </p>
@@ -153,75 +155,70 @@ const Hero = () => {
             </div>
 
             {/* Stats Row */}
-            <div className="flex flex-wrap gap-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="flex flex-wrap gap-8 animate-fade-in" style={{
+            animationDelay: '0.6s'
+          }}>
               {[{
-                number: '5+',
-                label: 'Projects',
-                icon: Star
-              }, {
-                number: '1+',
-                label: 'Years Experience',
-                icon: Zap
-              }, {
-                number: '8+',
-                label: 'Technologies',
-                icon: Code
-              }].map(({ number, label, icon: Icon }, index) => (
-                <div key={label} className="text-center group">
+              number: '5+',
+              label: 'Projects',
+              icon: Star
+            }, {
+              number: '1+',
+              label: 'Years Experience',
+              icon: Zap
+            }, {
+              number: '8+',
+              label: 'Technologies',
+              icon: Code
+            }].map(({
+              number,
+              label,
+              icon: Icon
+            }, index) => <div key={label} className="text-center group">
                   <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-tech-accent to-white bg-clip-text text-transparent">
                     {number}
                   </div>
                   <div className="text-sm opacity-70 mt-1">{label}</div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white hover:shadow-lg transition-all duration-500 group px-8 py-3 rounded-full font-semibold" 
-                onClick={() => scrollToSection('projects')}
-              >
+            <div className="flex flex-wrap gap-4 animate-fade-in" style={{
+            animationDelay: '0.9s'
+          }}>
+              <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white hover:shadow-lg transition-all duration-500 group px-8 py-3 rounded-full font-semibold" onClick={() => scrollToSection('projects')}>
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Get Started
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-500 px-8 py-3 rounded-full group" 
-                onClick={() => scrollToSection('contact')}
-              >
+              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-500 px-8 py-3 rounded-full group" onClick={() => scrollToSection('contact')}>
                 <Play className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                 Watch Intro
               </Button>
             </div>
 
             {/* Social Links */}
-            <div className="flex space-x-4 animate-fade-in" style={{ animationDelay: '1.2s' }}>
+            <div className="flex space-x-4 animate-fade-in" style={{
+            animationDelay: '1.2s'
+          }}>
               {[{
-                href: "https://github.com/9harshithp",
-                Icon: Github,
-                label: "GitHub"
-              }, {
-                href: "https://linkedin.com/in/harshithp914",
-                Icon: Linkedin,
-                label: "LinkedIn"
-              }, {
-                href: "mailto:harshithp914@gmail.com",
-                Icon: Mail,
-                label: "Email"
-              }].map(({ href, Icon, label }, index) => (
-                <a 
-                  key={label} 
-                  href={href} 
-                  target={href.includes('mailto') ? undefined : "_blank"} 
-                  rel={href.includes('mailto') ? undefined : "noopener noreferrer"} 
-                  className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 group"
-                >
+              href: "https://github.com/9harshithp",
+              Icon: Github,
+              label: "GitHub"
+            }, {
+              href: "https://linkedin.com/in/harshithp914",
+              Icon: Linkedin,
+              label: "LinkedIn"
+            }, {
+              href: "mailto:harshithp914@gmail.com",
+              Icon: Mail,
+              label: "Email"
+            }].map(({
+              href,
+              Icon,
+              label
+            }, index) => <a key={label} href={href} target={href.includes('mailto') ? undefined : "_blank"} rel={href.includes('mailto') ? undefined : "noopener noreferrer"} className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 group">
                   <Icon size={18} className="group-hover:scale-110 transition-transform duration-300" />
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
 
@@ -236,18 +233,14 @@ const Hero = () => {
                 {/* Profile Image */}
                 <div className="relative">
                   <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden relative group-hover:scale-105 transition-all duration-700 border-4 border-white/20">
-                    <img 
-                      src={profileImage} 
-                      alt="Harshith Ponnaganti - AI & Cloud Engineer" 
-                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" 
-                    />
+                    <img src={profileImage} alt="Harshith Ponnaganti - AI & Cloud Engineer" className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
                   </div>
                 </div>
                 
                 {/* Experience Badge */}
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-lg">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-800">5+</div>
+                    <div className="text-2xl font-bold text-gray-800">1+</div>
                     <div className="text-xs text-gray-600">Years Experience</div>
                   </div>
                 </div>
@@ -271,10 +264,7 @@ const Hero = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <button 
-            onClick={() => scrollToSection('about')} 
-            className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors duration-300 group"
-          >
+          <button onClick={() => scrollToSection('about')} className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors duration-300 group">
             <span className="text-sm">Scroll Down</span>
             <ArrowDown size={20} className="group-hover:animate-bounce" />
           </button>
