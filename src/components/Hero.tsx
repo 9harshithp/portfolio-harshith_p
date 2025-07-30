@@ -159,7 +159,7 @@ const Hero = () => {
                 label: 'Projects',
                 icon: Star
               }, {
-                number: '5+',
+                number: '1+',
                 label: 'Years Experience',
                 icon: Zap
               }, {
