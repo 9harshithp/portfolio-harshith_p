@@ -246,17 +246,7 @@ const Hero = () => {
                 </div>
                 
                 {/* Customer Rating Badge */}
-                <div className="absolute bottom-8 -left-8 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg flex items-center gap-2">
-                  <div className="flex -space-x-2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-2 border-white"></div>
-                    <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full border-2 border-white"></div>
-                    <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full border-2 border-white"></div>
-                  </div>
-                  <div className="text-sm">
-                    <div className="font-semibold text-gray-800">Best Customer</div>
-                    <div className="text-xs text-gray-600">Experience</div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
