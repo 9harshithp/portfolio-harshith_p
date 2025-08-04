@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Linkedin, Mail, Sparkles, Cpu, Cloud, Code, Zap, Star, Play, Download } from 'lucide-react';
-import profileImage from '@/assets/profile-picture.jpg';
+import profileImage from '@/assets/harshith-profile.jpg';
 import { useState, useEffect } from 'react';
 const Hero = () => {
   const [currentWord, setCurrentWord] = useState(0);
