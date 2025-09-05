@@ -186,11 +186,11 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{
             animationDelay: '0.9s'
           }}>
-              <Button size="lg" onClick={() => scrollToSection('projects')} className="bg-gradient-to-r bg-gradient-to-r to-orange-500 text-white hover:shadow-lg transition-all duration-500 group px-8 py-3 rounded-full font-semibold">
+              <Button size="lg" onClick={() => scrollToSection('projects')} className="bg-gradient-to-r bg-gradient-to-r to-orange-500 text-white hover:shadow-lg transition-all duration-500 group px-8 py-3 rounded-full font-semibold bg-[#01000a]">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Get Started
               </Button>
-              <Button size="lg" variant="outline" onClick={() => scrollToSection('contact')} className="bg-gradient-to-r bg-gradient-to-r to-orange-500 text-white hover:shadow-lg transition-all duration-500 group px-8 py-3 rounded-full font-semibold bg-[#67d9fc]">
+              <Button size="lg" variant="outline" onClick={() => scrollToSection('contact')} className="bg-gradient-to-r bg-gradient-to-r to-orange-500 text-white hover:shadow-lg transition-all duration-500 group px-8 py-3 rounded-full font-semibold bg-[#020010]">
                 <Play className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                 Watch Intro
               </Button>
