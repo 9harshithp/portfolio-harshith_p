@@ -194,7 +194,7 @@ const Hero = () => {
                 <Play className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                 Watch Intro
               </Button>
-              <Button size="lg" variant="outline" onClick={() => window.open('https://drive.google.com/file/d/1_TxkdCdpriFzzFEtcHdAFoHmiwibgkoe/view?usp=sharing', '_blank')} className="border-white/30 hover:bg-white/10 backdrop-blur-sm transition-all duration-500 px-8 py-3 rounded-full group font-semibold text-inherit">
+              <Button size="lg" variant="outline" onClick={() => window.open('https://drive.google.com/file/d/1_TxkdCdpriFzzFEtcHdAFoHmiwibgkoe/view?usp=sharing', '_blank')} className="border-white/30 backdrop-blur-sm transition-all duration-500 px-8 py-3 rounded-full group font-semibold text-white bg-inherit">
                 <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Download Resume
               </Button>
