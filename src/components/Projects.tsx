@@ -101,7 +101,7 @@ const Projects = () => {
             <p className="text-xl mb-6 leading-relaxed opacity-90">
               I'm constantly working on new innovative projects. Follow my GitHub to stay updated with my latest work.
             </p>
-            <Button size="lg" variant="outline" onClick={() => window.open('https://github.com/9harshithp', '_blank')} className="border-white text-white hover:text-primary transition-all duration-300 font-semibold bg-inherit">
+            <Button size="lg" variant="outline" onClick={() => window.open('https://github.com/9harshithp', '_blank')} className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white hover:shadow-lg transition-all duration-500 group px-8 py-3 rounded-full font-semibold">
               <Github className="w-5 h-5 mr-2" />
               Follow on GitHub
             </Button>
