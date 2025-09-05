@@ -190,7 +190,7 @@ const Hero = () => {
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Get Started
               </Button>
-              <Button size="lg" variant="outline" onClick={() => scrollToSection('contact')} className="orange-500-to-r bg-gradient-to-br decoration-white text-white hover:shadow-lg transition-all duration-500 group px-8 py-3 rounded-full font-semibold bg-gray-100">
+              <Button size="lg" variant="outline" onClick={() => scrollToSection('contact')} className="bg-gradient-to-r bg-gradient-to-r to-orange-500 text-white hover:shadow-lg transition-all duration-500 group px-8 py-3 rounded-full font-semibold">
                 <Play className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                 Watch Intro
               </Button>
